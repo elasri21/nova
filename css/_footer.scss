@@ -1,0 +1,156 @@
+/*start footer */
+footer {
+    .container {
+        .useful-links {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            .social-media-logo {
+                .logo {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    font-size: 50px;
+                    font-weight: 400;
+                    color: $btn-bg;
+                    text-transform: capitalize;
+                    margin-bottom: 25px;
+                }
+                p {
+                    max-width: 250px;
+                    margin-bottom: 20px;
+                }
+                .social {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        background-color: $btn-bg;
+                        transition: .3s;
+                        opacity: .4;
+                        i {
+                            font-size: 22px;
+                            color: $white;
+                        }
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            .links {
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    li {
+                        a {
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: $text-c;
+                            text-transform: capitalize;
+                            &:hover {
+                                color: $btn-bg;
+                            }
+                        }
+                    }
+                }
+            }
+            .apps {
+                .app {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    padding: 15px 10px;
+                    background-color: $white;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    &:first-of-type {
+                        margin-bottom: 20px;
+                    }
+                    i {
+                        font-size: 25px;
+                        color: $title-c;
+                    }
+                    .info-app {
+                        h4 {
+                            font-size: 14px;
+                            text-transform: capitalize;
+                            color: $title-c;
+                            font-weight: 400;
+                        }
+                        h5 {
+                            font-size: 18px;
+                            text-transform: capitalize;
+                            color: $title-c;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+        .copy-right {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid $text-c;
+            p {
+                text-align: center;
+                font-size: 16px;
+                font-weight: 400;
+                color: $text-c;
+                text-transform: capitalize;
+                a {
+                    font-weight: 18px;
+                    font-weight: 600;
+                    color: $text-c;
+                    text-transform: lowercase;
+                    &:hover {
+                        color: $title-c;
+                    }
+                }
+            }
+        }
+        .go-up {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            background-color: $btn-bg;
+            width: 45px;
+            height: 45px;
+            transition: opacity .3s;
+            overflow: hidden;
+            i {
+                font-size: 25px;
+                color: $white;
+                position: relative;
+            }
+            &::before {
+                content: "";
+                width: 0;
+                height: 0;
+                background-color: $before-btn;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: .6s;
+            }
+            &:hover::before {
+                width: 200%;
+                height: 200%;
+            }
+        }
+    }
+}
+/*end footer */

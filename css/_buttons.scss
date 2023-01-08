@@ -1,0 +1,54 @@
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+}
+.button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: fit-content;
+    background-color: $btn-bg;
+    padding: 15px 30px;
+    overflow: hidden;
+    span {
+        font-size: 18px;
+        text-transform: capitalize;
+        font-weight: 600;
+        color: $white;
+        position: relative;
+    }
+    i {
+        color: $white;
+    }
+    &.rad-30 {
+        border-radius: 30px;
+        &::before {
+            border-radius: 30px;
+        }
+    }
+    &.rad-10 {
+        border-radius: 10px;
+        &::before {
+            border-radius: 10px;
+        }
+    }
+    &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        background-color: $before-btn;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .6s;
+    }
+    &:hover::before {
+        width: 200%;
+        height: 200%;
+    }
+}
